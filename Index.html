@@ -3,12 +3,35 @@
 <head>
       <title>Proyecto DSW</title>
       <link rel="stylesheet" href="estilos.css">
+
+<script>
+
+function mostrarLaborales() {
+    var x = document.getElementById('laborales');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+
+}
+
+function mostrarUniversitarios() {
+    var x = document.getElementById('universitarios');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>
+   
 </head>
 <body>
 
   <header>
     <div>
-      <img src="logo.jpg" width="100" >
+      <img src="logo.jpg" width="100" > <h1>Generador de Documentos</h1>
     </div>
     <nav>
       <ul class= "menu">
@@ -22,14 +45,14 @@
   <section class="main">
     <section class="articles">
         <article>
-          <h2>Documentos Laborales</h2>
-          <p>Contratos de Trabajo <br>Reglamento Interno de Trabajo </br> Comité de Empresa <br>Facultad Disciplinaria</br>Responsabilidad de la Higiene y Seguridad en el Trabajo</p>
+          <button onclick="mostrarLaborales()"> <h2>Documentos Laborales</h2> </button>
+          <p id="laborales">Contratos de Trabajo <br>Reglamento Interno de Trabajo </br> Comité de Empresa <br>Facultad Disciplinaria</br>Responsabilidad de la Higiene y Seguridad en el Trabajo</p>
 
         </article>
 
         <article>
-          <h2>Documentos Universitarios</h2>
-          <p>Cancelacion de asignatura <br>Certificado de matricula </br> Renovacion Fondo EPM <br>Suspension de semestre</br>Descuento de Hermano</p>
+          <button onclick="mostrarUniversitarios()"> <h2>Documentos Universitarios</h2> </button>
+          <p id="universitarios">Cancelacion de asignatura <br>Certificado de matricula </br> Renovacion Fondo EPM <br>Suspension de semestre</br>Descuento de Hermano</p>
         </article>
     </section>
     <aside>
